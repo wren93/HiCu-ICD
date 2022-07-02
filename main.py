@@ -1,20 +1,31 @@
-from utils.options import args
+import os
+import time
 import random
 import numpy as np
 import torch
 import csv
 import sys
-from utils.utils import load_lookups, prepare_instance, MyDataset, my_collate, my_collate_longformer, early_stop, save_everything, prepare_instance_longformer, prepare_code_title
-from utils.models import pick_model
-import torch.optim as optim
 from collections import defaultdict
+import torch.optim as optim
 from torch.utils.data import DataLoader
-import os
-import time
-from utils.train_test import train, test
 from transformers import AdamW
 from gensim.models.poincare import PoincareModel
-import logging
+
+from utils.utils import (
+    load_lookups,
+    prepare_instance,
+    MyDataset,
+    my_collate,
+    my_collate_longformer,
+    early_stop,
+    save_everything,
+    prepare_instance_longformer,
+    prepare_code_title
+)
+from utils.options import args
+from utils.models import pick_model
+from utils.train_test import train, test
+
 
 if __name__ == "__main__":
     # logging.basicConfig(level=logging.INFO)

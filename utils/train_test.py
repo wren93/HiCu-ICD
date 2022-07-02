@@ -2,8 +2,6 @@
 import torch
 import numpy as np
 from utils.utils import all_metrics, print_metrics
-import time
-import datetime
 
 
 def train(args, model, optimizer, scheduler, epoch, gpu, data_loader, cur_depth):
