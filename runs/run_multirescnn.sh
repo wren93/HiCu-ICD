@@ -3,7 +3,7 @@ python main.py
     --DATA_DIR /path/to/project/root/data \
     --MIMIC_3_DIR /path/to/project/root/data/mimic3 \
     --data_path /path/to/project/root/data/mimic3/train_full.csv \
-    --embed_file /path/to/project/root/data/mimic3/processed_full_300.embed \
+    --embed_file /path/to/project/root/data/mimic3/processed_full_100.embed \
     --vocab /path/to/project/root/data/mimic3/vocab.csv \
     --Y full \
     --model MultiResCNN \
