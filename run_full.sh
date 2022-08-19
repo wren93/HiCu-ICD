@@ -1,0 +1,25 @@
+python -m src.run \
+	--problem_name mimic-iii_cl_full \
+	--checkpoint_dir /scratch/gobi2/wren/icd/laat/checkpoints \
+	--max_seq_length 4000 \
+	--mode static \
+	--n_epoch "2,3,3,3,50" \
+	--patience 5 \
+	--lr_scheduler_patience 2 \
+	--batch_size 8 \
+	--optimiser adamw \
+	--lr 0.0005 \
+	--dropout 0.3 \
+	--main_metric micro_f1 \
+	--save_results_on_train \
+	--embedding_mode word2vec \
+	--embedding_file data/embeddings/word2vec_sg0_100.model \
+	--joint_mode hicu \
+	--d_a 512 \
+	--metric_level -1 \
+	--disable_attention_linear \
+	RNN \
+	--rnn_mode LSTM \
+	--n_layers 1 \
+	--bidirectional 1 \
+	--hidden_size 512
