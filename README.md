@@ -1,5 +1,5 @@
 # HiCu-ICD
-HiCu: Leveraging Hierarchy for Curriculum Learning in Automated ICD Coding
+This repo contains code for our MLHC 2022 paper [HiCu: Leveraging Hierarchy for Curriculum Learning in Automated ICD Coding](https://arxiv.org/abs/2208.02301).
 
 Setup
 -----
@@ -14,7 +14,6 @@ Install the following packages to run the code in this repository:
 * tqdm==4.62.3
 * transformers==4.5.1
 
-Or run this command in the terminal:
 ```bash
 pip install -r requirements.txt
 ```
@@ -46,12 +45,8 @@ python preprocess_mimic3.py
 
 Training
 -----
-1. Work in progress...
-2. If you want to multiple GPUs (e.g. 4 GPUs), use `--gpu '0,1,2,3'`.
-
-Evaluation
------
-Work in progress...
+1. See files under `/runs` for training configs for MultiResCNN and RAC models.
+2. For LAAT (Bi-LSTM) models, switch to `LAAT` branch and use the training configs in the root folder.
 
 Acknowledgement
 -----
